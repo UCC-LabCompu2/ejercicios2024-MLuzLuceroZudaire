@@ -21,29 +21,37 @@
 <form name="formulario inscripcion" id="formulario">
 
     <p>
-        Nombre: <input type="text" name="nombre" id="nombre" size="60" placeholder="Ingrese nombre" maxlength="40">
+        <label for="nombre"> Nombre:</label>
+        <input type="text" name="nombre" id="nombre" size="60" placeholder="Ingrese nombre" maxlength="40">
     </p>
     <p>
-        Apellido:<input type="text" name="apellido" id="apellido" size="40" placeholder=" Ingrese apellido" maxlength="40">
+        <label for="apellido"> Apellido: </label>
+        <input type="text" name="apellido" id="apellido" size="60" placeholder=" Ingrese apellido" maxlength="40">
     </p>
     <p>
         Sexo:<br> <!--SALTO SE LINEA-->
-        <input type="radio" name="genero" value="Masculino">Masculino
-        <input type="radio" name="genero" value="Femenino"> Femenino
-        <input type="radio" name="genero" value="Prefiero no espeficicar">Prefiero no especificar
+        <input type="radio" name="genero" value="Masculino" id="Masculino">Masculino
+        <label for="masculino"> Masculino</label>
+        <input type="radio" name="genero" value="Femenino" id="Femenino"> Femenino
+        <label for="Femenino">Femenino</label>
+        <input type="radio" name="genero" value="Prefiero no espeficicar" id="no especificar">Prefiero no especificar
+        <label for="no especificar"> Prefiero no especificar </label>
 
     </p>
     <p>
         Edad:<input type="number" name="edad" id="name" placeholder=" Indique su edad" minlength="0" maxlength="3">
     </p>
     <p>
-        Email: <input type="email" name="email" id="email" size="60" placeholder="Ingrese su mail" maxlength="40">
+        <label for="email"> Email: </label>
+        <input type="email" name="email" id="email" size="60" placeholder="Ingrese su mail" maxlength="40">
     </p>
     <p>
-        Usuario: <input type="text" name="usurio" id="usuario" size="20" placeholder="Ingrese nombre de usuario" maxlength="15">
+        <label for="usuario"> Usurio: </label>
+        <input type="text" name="usurio" id="usuario" size="20" placeholder="Ingrese nombre de usuario" maxlength="15">
     </p>
     <p>
-        Password: <input type="password" name="password" id="password" size="20" placeholder="Ingrese una contraseña" maxlength="12">
+        <label for="password"> Password: </label>
+        <input type="password" name="password" id="password" size="20" placeholder="Ingrese una contraseña" maxlength="12">
     </p>
     <p>
         Confirmar Password: <input type="password" name="confirmpassword" id="confirmpassword" size="20" placeholder="Repita su contraseña" maxlength="12">
@@ -66,10 +74,15 @@
     <p>
         Tema:
         <input type="checkbox" name="politica" id="chkpolitica">Política
+        <label for="chkpolitica"> Politica </label>
         <input type="checkbox" name="negocio" id="chknegocio">Negocios
+        <label for="chknegocio"> negocio </label>
         <input type="checkbox" name="tecnologia" id="chktecnologia">Tecnología
+        <label for="chktecnologia"> Tecnologia </label>
         <input type="checkbox" name="salud" id="chksalus">Salud
+        <label for="chksalus"> Salud </label>
     <p>
+    <label for="comentario"> Agregue un comentario</label>
         Agregue un comentario:<br>
         <textarea
                 name="Comentario" id="comentario" rows="5" cols="20 " placeholder="Ingrese comentario">
