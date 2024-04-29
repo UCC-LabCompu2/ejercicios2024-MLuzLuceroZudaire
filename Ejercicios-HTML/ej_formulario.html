@@ -6,7 +6,7 @@
     <style>
         form {
             display: block;
-            margin-top: 0em;
+            margin-top: 0;
         }
     </style>
 </head>
@@ -39,7 +39,8 @@
 
     </p>
     <p>
-        Edad:<input type="number" name="edad" id="name" placeholder=" Indique su edad" minlength="0" maxlength="3">
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" id="edad" placeholder=" Indique su edad" minlength="0" maxlength="3">
     </p>
     <p>
         <label for="email"> Email: </label>
@@ -54,11 +55,13 @@
         <input type="password" name="password" id="password" size="20" placeholder="Ingrese una contraseña" maxlength="12">
     </p>
     <p>
-        Confirmar Password: <input type="password" name="confirmpassword" id="confirmpassword" size="20" placeholder="Repita su contraseña" maxlength="12">
+        <label for="confirmpassword">Confirmar Password:</label>
+        <input type="password" name="confirmpassword" id="confirmpassword" size="20" placeholder="Repita su contraseña" maxlength="12">
     </p>
     <p>
         Tipo de servicio:
-        <select name="Tipodeservicio" id="Tipodeservicio">
+        <label for="Tipodeservicio">
+        </label><select name="Tipodeservicio" id="Tipodeservicio">
             <option value="free">
                 Free
             </option>
@@ -69,10 +72,8 @@
                 Premium
             </option>
         </select>
-
     </p>
     <p>
-        Tema:
         <input type="checkbox" name="politica" id="chkpolitica">Política
         <label for="chkpolitica"> Politica </label>
         <input type="checkbox" name="negocio" id="chknegocio">Negocios
@@ -82,18 +83,17 @@
         <input type="checkbox" name="salud" id="chksalus">Salud
         <label for="chksalus"> Salud </label>
     <p>
-    <label for="comentario"> Agregue un comentario</label>
-        Agregue un comentario:<br>
+        <label for="comentario"> Agregue un comentario</label>
+        <br>
         <textarea
                 name="Comentario" id="comentario" rows="5" cols="20 " placeholder="Ingrese comentario">
-    </textarea>
+        </textarea>
     </p>
     <p>
-        <button>
+        <button type="button">
             Boton de Enviar
         </button>
     </p>
-
 </form>
 </body>
 </html>
