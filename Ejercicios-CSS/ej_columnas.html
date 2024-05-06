@@ -20,6 +20,42 @@
         a:hover {
             font-weight: bold;
         }
+        a:active{
+            font-weight: bold;
+        }
+        header:hover{
+            background-color: mediumturquoise;
+        }
+        article{
+            column-count: 2;
+            column-gap: 20px;
+            margin: 5px 20px;
+        }
+        div.transtion1{
+            width: 100px;
+            height: 100px;
+            background: cadetblue;
+            -webkit-transition: width 2s;
+            transition: width 2s;
+        }
+        div:hover.transtion1{
+            width: 300px;
+        }
+
+        div.transtion2{
+            width: 100px;
+            height: 100px;
+            background: #feab5a;
+            -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+            transition: width 2s, height 2s, transform 2s;
+        }
+        div:hover.transtion2{
+            width: 200px;
+            height: 200px;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+
+        }
     </style>
 </head>
 <body style="font-family: Arial, Serif">
@@ -62,7 +98,7 @@
                 de la tesis.
             </p>
         </div>
-        <div class="grid-item">
+        <div >
             <p>
                 Gracias a una profunda investigación comercial, sumada a una simulación realizada por un programa llamado
                 anylogic, consiguieron localizar de manera estratégica 19 estaciones con 280 bicicletas, en Nueva Córdoba y
@@ -96,6 +132,9 @@
         </div>
     </article>
 </section>
-
+<div class="transtion1">
+</div>
+<div class="transtion2">
+</div>
 </body>
 </html>
