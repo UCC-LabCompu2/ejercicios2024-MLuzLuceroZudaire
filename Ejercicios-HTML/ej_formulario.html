@@ -11,11 +11,6 @@
     </style>
 </head>
 <body>
-<!--Cree un Formulario con los campos que se proponen a continuacion-->
-<!--Agregue el atributo legend-->
-
-<!--Si tienes dudas de como hacer un formulario, puedes consultar:
-    https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output-->
 
 <h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
 <form name="formulario inscripcion" id="formulario">
@@ -30,13 +25,9 @@
     </p>
     <p>
         Sexo:<br> <!--SALTO SE LINEA-->
-        <input type="radio" name="genero" value="Masculino" id="Masculino">Masculino
-        <label for="masculino"> Masculino</label>
-        <input type="radio" name="genero" value="Femenino" id="Femenino"> Femenino
-        <label for="Femenino">Femenino</label>
-        <input type="radio" name="genero" value="Prefiero no espeficicar" id="no especificar">Prefiero no especificar
-        <label for="no especificar"> Prefiero no especificar </label>
-
+        <label for="Masculino"></label> <input type="radio" name="genero" value="Masculino" id="Masculino">Masculino
+        <label for="Femenino"></label> <input type="radio" name="genero" value="Femenino" id="Femenino"> Femenino
+        <label for="no especificar"></label> <input type="radio" name="genero" value="Prefiero no espeficicar" id="no especificar"> Prefiero no especificar
     </p>
     <p>
         <label for="edad">Edad:</label>
@@ -62,28 +53,20 @@
     </p>
     <p>
         Tipo de servicio:
-        <label for="Tipodeservicio">
-        </label><select name="Tipodeservicio" id="Tipodeservicio">
-            <option value="free">
-                Free
-            </option>
-            <option value="standard">
-                Standard
-            </option>
-            <option value="premium">
-                Premium
-            </option>
-        </select>
+        <label for="Free">Free</label> <input type="checkbox" name="tipo_servicio" value="Free" id="Free">
+        <label for="Standard">Standard</label> <input type="checkbox" name="tipo_servicio" value="Standard" id="Standard">
+        <label for="Premium">Premium</label> <input type="checkbox"name="tipo_servicio" value="Premium" id="Premium">
+
     </p>
     <p>
-        <input type="checkbox" name="politica" id="chkpolitica">Política
-        <label for="chkpolitica"> Politica </label>
-        <input type="checkbox" name="negocio" id="chknegocio">Negocios
-        <label for="chknegocio"> negocio </label>
-        <input type="checkbox" name="tecnologia" id="chktecnologia">Tecnología
-        <label for="chktecnologia"> Tecnologia </label>
-        <input type="checkbox" name="salud" id="chksalus">Salud
-        <label for="chksalus"> Salud </label>
+        <label for="tema">Tema:</label>
+        <select id="tema">
+            <option value="politica">Politica</option>
+            <option value="negocio">Negocios</option>
+            <option value="tecnoligia">Tecnologia</option>
+            <option value="salud">Salud</option>
+        </select>
+
     <p>
         <label for="comentario"> Agregue un comentario</label>
         <br>
