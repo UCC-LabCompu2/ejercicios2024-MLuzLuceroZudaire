@@ -46,7 +46,7 @@ let convertirUnidades=(nombre, valor) => {
 function ConvertirGR (id) {
     let grad, rad;
     if (id==="grados"){
-       let grad = document.getElementById("grados").value;
+        let grad = document.getElementById("grados").value;
         rad = (grad*Math.PI)/180;
         document.getElementById("radianes").value=rad;
     } else if (id==="radianes"){
@@ -143,5 +143,111 @@ function CargarLocalStorage (){
     document.getElementById("dist").value= cantidad + " " + unidad;
 }
 
+
+function DibujarCirculoCuadrado () {
+    var canvas =document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var yMax = canvas.height;
+    var margen=5;
+
+    var xMax =canvas.width
+
+
+    ctx.fillStyle= "#7a1d63";
+    ctx.fillRect(margen, yMax-40-margen, 40, 40);
+
+    ctx.arc(xMax/2, yMax/2, 20, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = "rgba(58,148,150,0.49)"
+    ctx.fill ();
+}
+
+var bandera;
+function dibujar (event) {
+    var canvas = document.getElementById("canvasparadibujar");
+    var ctx=canvas.getContext("2d");
+
+    var posX= event.clientX;
+    var posY = event.clientY;
+    console.log(posX, posY);
+
+
+    canvas.onmousedown = function (){bandera=true};
+    canvas.onmouseup = function (){ bandera=false};
+    if (bandera===true) {
+        ctx.fillRect(posX, posY, 5, 5);
+        ctx.fillStyle= "#55458252";
+        ctx.fill();
+    }
+}
+
+function Limpiar (){
+    var canvas = document.getElementById("canvasparadibujar");
+    var ctx=canvas.getContext("2d");
+
+    canvas.width=canvas.width;
+
+}
+
+
+function Cuadriculado () {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var alturamax = canvas.height;
+    var lateralmax = canvas.width;
+//Horizontales
+    ctx.beginPath();
+    for (var i = 0; i <alturamax;) {
+        ctx.moveTo(0, i);
+        ctx.lineTo(lateralmax, i);
+        ctx.strokeStyle = "#1f6188";
+        ctx.stroke();
+        i=i+20;
+    }
+    ctx.closePath();
+//Verticales
+    ctx.beginPath()
+    for (var i=0; i<lateralmax;){
+        ctx.moveTo(i,0);
+        ctx.lineTo(i,alturamax);
+        ctx.strokeStyle= "#1f6188";
+        ctx.stroke();
+        i=i+20;
+    }
+    ctx.closePath()
+
+//Eje X
+    ctx.beginPath();
+    ctx.moveTo(0,alturamax/2);
+    ctx.lineTo(lateralmax, alturamax/2);
+    ctx.strokeStyle ="#521511";
+    ctx.stroke();
+//Eje Y
+    ctx.beginPath();
+    ctx.moveTo(lateralmax/2,0);
+    ctx.lineTo(lateralmax/2, alturamax);
+    ctx.strokeStyle ="#521511";
+    ctx.stroke();
+}
+
+
+function dibujarImagen(posx,posy){
+    var canvas= document.getElementById("myCanvas");
+    var ctx=canvas.getContext("2d");
+
+    console.log(posx, posy);
+    var img = new Image();
+    img.src= "images/auto.png";
+
+    canvas.width=canvas.width
+
+    img.onload = function () {
+        ctx.drawImage(img, posx, posy);
+    }
+
+
+}
 
 
